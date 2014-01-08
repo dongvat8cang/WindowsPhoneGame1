@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPhoneGame1", "WindowsPhoneGame1\WindowsPhoneGame1\WindowsPhoneGame1.csproj", "{15329FC6-89F3-4674-A3EF-670A1AC482BF}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WindowsPhoneGame1Content", "WindowsPhoneGame1\WindowsPhoneGame1Content\WindowsPhoneGame1Content.contentproj", "{05D07BCE-0D90-4414-8517-12F6B55AEF29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRpgLibrary", "XRpgLibrary\XRpgLibrary.csproj", "{9EE7BC45-9050-4CA9-9E2B-26BBB68CEB5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15329FC6-89F3-4674-A3EF-670A1AC482BF}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{15329FC6-89F3-4674-A3EF-670A1AC482BF}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{15329FC6-89F3-4674-A3EF-670A1AC482BF}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{15329FC6-89F3-4674-A3EF-670A1AC482BF}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{15329FC6-89F3-4674-A3EF-670A1AC482BF}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{15329FC6-89F3-4674-A3EF-670A1AC482BF}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{05D07BCE-0D90-4414-8517-12F6B55AEF29}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{05D07BCE-0D90-4414-8517-12F6B55AEF29}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{9EE7BC45-9050-4CA9-9E2B-26BBB68CEB5F}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{9EE7BC45-9050-4CA9-9E2B-26BBB68CEB5F}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{9EE7BC45-9050-4CA9-9E2B-26BBB68CEB5F}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{9EE7BC45-9050-4CA9-9E2B-26BBB68CEB5F}.Release|Windows Phone.Build.0 = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

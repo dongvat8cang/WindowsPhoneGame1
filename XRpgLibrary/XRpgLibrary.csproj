@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{9EE7BC45-9050-4CA9-9E2B-26BBB68CEB5F}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Windows Phone</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XRpgLibrary</RootNamespace>
+    <AssemblyName>XRpgLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows Phone</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>0fd520c6-82e4-44bc-b7b7-48df056e1264</XnaCrossPlatformGroupID>
+    <XnaOutputType>Library</XnaOutputType>
+    <XnaRefreshLevel>1</XnaRefreshLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows Phone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows Phone\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS_PHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Windows Phone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows Phone\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS_PHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CharacterClasses\AttributePair.cs" />
+    <Compile Include="CharacterClasses\Character.cs" />
+    <Compile Include="CharacterClasses\Entity.cs" />
+    <Compile Include="CharacterClasses\EntityData.cs" />
+    <Compile Include="CharacterClasses\EntityDataManager.cs" />
+    <Compile Include="CharacterClasses\NonPlayerCharacter.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Controls\Control.cs" />
+    <Compile Include="Controls\ControlManager.cs" />
+    <Compile Include="Controls\Label.cs" />
+    <Compile Include="Controls\LeftRightSelector.cs" />
+    <Compile Include="Controls\LinkLabel.cs" />
+    <Compile Include="Controls\ListBox.cs" />
+    <Compile Include="Controls\PictureBox.cs" />
+    <Compile Include="Controls\SpinBox.cs" />
+    <Compile Include="ConversationClasses\Conversation.cs" />
+    <Compile Include="ConversationClasses\ConversationManager.cs" />
+    <Compile Include="ConversationClasses\ConversationNode.cs" />
+    <Compile Include="EffectClasses\BaseEffect.cs" />
+    <Compile Include="EffectClasses\BaseEffectData.cs" />
+    <Compile Include="EffectClasses\BaseEffectDataManager.cs" />
+    <Compile Include="EffectClasses\DamageEffect.cs" />
+    <Compile Include="EffectClasses\DamageEffectData.cs" />
+    <Compile Include="EffectClasses\HealEffect.cs" />
+    <Compile Include="EffectClasses\HealEffectData.cs" />
+    <Compile Include="EffectClasses\Resistance.cs" />
+    <Compile Include="EffectClasses\ResistanceData.cs" />
+    <Compile Include="EffectClasses\Weakness.cs" />
+    <Compile Include="EffectClasses\WeaknessData.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="GameStateManager.cs" />
+    <Compile Include="InputHandler.cs" />
+    <Compile Include="ItemClasses\Armor.cs" />
+    <Compile Include="ItemClasses\ArmorData.cs" />
+    <Compile Include="ItemClasses\Backpack.cs" />
+    <Compile Include="ItemClasses\BaseItem.cs" />
+    <Compile Include="ItemClasses\Chest.cs" />
+    <Compile Include="ItemClasses\ChestData.cs" />
+    <Compile Include="ItemClasses\GameItem.cs" />
+    <Compile Include="ItemClasses\GameItemManager.cs" />
+    <Compile Include="ItemClasses\ItemDataManager.cs" />
+    <Compile Include="ItemClasses\ItemManager.cs" />
+    <Compile Include="ItemClasses\ItemSprite.cs" />
+    <Compile Include="ItemClasses\Key.cs" />
+    <Compile Include="ItemClasses\KeyData.cs" />
+    <Compile Include="ItemClasses\Reagent.cs" />
+    <Compile Include="ItemClasses\ReagentData.cs" />
+    <Compile Include="ItemClasses\Shield.cs" />
+    <Compile Include="ItemClasses\ShieldData.cs" />
+    <Compile Include="ItemClasses\Weapon.cs" />
+    <Compile Include="ItemClasses\WeaponData.cs" />
+    <Compile Include="Mechanics.cs" />
+    <Compile Include="Modifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestClasses\Quest.cs" />
+    <Compile Include="QuestClasses\QuestManager.cs" />
+    <Compile Include="QuestClasses\QuestStep.cs" />
+    <Compile Include="RolePlayingGame.cs" />
+    <Compile Include="SkillClasses\Recipe.cs" />
+    <Compile Include="SkillClasses\RecipeManager.cs" />
+    <Compile Include="SkillClasses\Skill.cs" />
+    <Compile Include="SkillClasses\SkillData.cs" />
+    <Compile Include="SkillClasses\SkillDataManager.cs" />
+    <Compile Include="SpellClasses\Spell.cs" />
+    <Compile Include="SpellClasses\SpellData.cs" />
+    <Compile Include="SpellClasses\SpellDataManager.cs" />
+    <Compile Include="SpriteClasses\AnimatedSprite.cs" />
+    <Compile Include="SpriteClasses\Animation.cs" />
+    <Compile Include="SpriteClasses\BaseSprite.cs" />
+    <Compile Include="TileEngine\Camera.cs" />
+    <Compile Include="TileEngine\Engine.cs" />
+    <Compile Include="TileEngine\ILayer.cs" />
+    <Compile Include="TileEngine\MapLayer.cs" />
+    <Compile Include="TileEngine\Tile.cs" />
+    <Compile Include="TileEngine\TileMap.cs" />
+    <Compile Include="TileEngine\Tileset.cs" />
+    <Compile Include="TrapClasses\Trap.cs" />
+    <Compile Include="TrapClasses\TrapData.cs" />
+    <Compile Include="TrapClasses\TrapManager.cs" />
+    <Compile Include="WorldClasses\Level.cs" />
+    <Compile Include="WorldClasses\LevelData.cs" />
+    <Compile Include="WorldClasses\MapData.cs" />
+    <Compile Include="WorldClasses\MapLayerData.cs" />
+    <Compile Include="WorldClasses\TilesetData.cs" />
+    <Compile Include="WorldClasses\World.cs" />
+    <Compile Include="WorldClasses\WorldManager.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
