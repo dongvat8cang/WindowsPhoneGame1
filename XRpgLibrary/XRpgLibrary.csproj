@@ -90,7 +90,6 @@
     <Compile Include="EffectClasses\WeaknessData.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="GameStateManager.cs" />
-    <Compile Include="InputHandler.cs" />
     <Compile Include="ItemClasses\Armor.cs" />
     <Compile Include="ItemClasses\ArmorData.cs" />
     <Compile Include="ItemClasses\Backpack.cs" />
@@ -128,13 +127,6 @@
     <Compile Include="SpriteClasses\AnimatedSprite.cs" />
     <Compile Include="SpriteClasses\Animation.cs" />
     <Compile Include="SpriteClasses\BaseSprite.cs" />
-    <Compile Include="TileEngine\Camera.cs" />
-    <Compile Include="TileEngine\Engine.cs" />
-    <Compile Include="TileEngine\ILayer.cs" />
-    <Compile Include="TileEngine\MapLayer.cs" />
-    <Compile Include="TileEngine\Tile.cs" />
-    <Compile Include="TileEngine\TileMap.cs" />
-    <Compile Include="TileEngine\Tileset.cs" />
     <Compile Include="TrapClasses\Trap.cs" />
     <Compile Include="TrapClasses\TrapData.cs" />
     <Compile Include="TrapClasses\TrapManager.cs" />

@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using RpgLibrary.CharacterClasses;
 using RpgLibrary.ItemClasses;
 
-using XRpgLibrary.TileEngine;
+
 using XRpgLibrary.SpriteClasses;
 
 namespace XRpgLibrary.WorldClasses
@@ -82,9 +82,9 @@ namespace XRpgLibrary.WorldClasses
             base.Draw(gameTime);
         }
 
-        public void DrawLevel(GameTime gameTime, SpriteBatch spriteBatch, Camera camera)
+        public void DrawLevel(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            levels[currentLevel].Draw(gameTime, spriteBatch, camera);
+            levels[currentLevel].Draw(gameTime, spriteBatch);
         }
 
         #endregion

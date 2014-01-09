@@ -6,7 +6,6 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using XRpgLibrary.TileEngine;
 
 namespace XRpgLibrary.SpriteClasses
 {
@@ -107,11 +106,7 @@ namespace XRpgLibrary.SpriteClasses
                 Color.White);
         }
 
-        public void LockToMap()
-        {
-            position.X = MathHelper.Clamp(position.X, 0, TileMap.WidthInPixels - Width);
-            position.Y = MathHelper.Clamp(position.Y, 0, TileMap.HeightInPixels - Height);
-        }
+      
 
         #endregion
     }

@@ -84,15 +84,7 @@ namespace XRpgLibrary.Controls
             if (!AcceptInput)
                 return;
 
-            if (InputHandler.ButtonPressed(Buttons.LeftThumbstickUp, playerIndex) ||
-                InputHandler.ButtonPressed(Buttons.DPadUp, playerIndex) ||
-                InputHandler.KeyPressed(Keys.Up))
-                PreviousControl();
-
-            if (InputHandler.ButtonPressed(Buttons.LeftThumbstickDown, playerIndex) ||
-                InputHandler.ButtonPressed(Buttons.DPadDown, playerIndex) ||
-                InputHandler.KeyPressed(Keys.Down))
-                NextControl();
+           
         }
 
         public void Draw(SpriteBatch spriteBatch)

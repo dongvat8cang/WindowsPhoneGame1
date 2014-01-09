@@ -136,42 +136,42 @@ namespace XRpgLibrary.Controls
             if (!HasFocus)
                 return;
 
-            if (InputHandler.KeyReleased(Keys.Down) ||
-                InputHandler.ButtonReleased(Buttons.LeftThumbstickDown, playerIndex))
-            {
-                if (selectedItem < items.Count - 1)
-                {
-                    selectedItem++;
-                    if (selectedItem >= startItem + lineCount)
-                        startItem = selectedItem - lineCount + 1;
-                    OnSelectionChanged(null);
-                }
-            }
-            else if (InputHandler.KeyReleased(Keys.Up) ||
-                InputHandler.ButtonReleased(Buttons.LeftThumbstickUp, playerIndex))
-            {
-                if (selectedItem > 0)
-                {
-                    selectedItem--;
-                    if (selectedItem < startItem)
-                        startItem = selectedItem;
-                    OnSelectionChanged(null);
-                }
-            }
+            //if (InputHandler.KeyReleased(Keys.Down) ||
+            //    InputHandler.ButtonReleased(Buttons.LeftThumbstickDown, playerIndex))
+            //{
+            //    if (selectedItem < items.Count - 1)
+            //    {
+            //        selectedItem++;
+            //        if (selectedItem >= startItem + lineCount)
+            //            startItem = selectedItem - lineCount + 1;
+            //        OnSelectionChanged(null);
+            //    }
+            //}
+            //else if (InputHandler.KeyReleased(Keys.Up) ||
+            //    InputHandler.ButtonReleased(Buttons.LeftThumbstickUp, playerIndex))
+            //{
+            //    if (selectedItem > 0)
+            //    {
+            //        selectedItem--;
+            //        if (selectedItem < startItem)
+            //            startItem = selectedItem;
+            //        OnSelectionChanged(null);
+            //    }
+            //}
             
-            if (InputHandler.KeyPressed(Keys.Enter) ||
-                InputHandler.ButtonReleased(Buttons.A, playerIndex))
-            {
-                HasFocus = false;
-                OnSelected(null);
-            }
+            //if (InputHandler.KeyPressed(Keys.Enter) ||
+            //    InputHandler.ButtonReleased(Buttons.A, playerIndex))
+            //{
+            //    HasFocus = false;
+            //    OnSelected(null);
+            //}
 
-            if (InputHandler.KeyReleased(Keys.Escape) ||
-                InputHandler.ButtonReleased(Buttons.B, playerIndex))
-            {
-                HasFocus = false;
-                OnLeave(null);
-            }
+            //if (InputHandler.KeyReleased(Keys.Escape) ||
+            //    InputHandler.ButtonReleased(Buttons.B, playerIndex))
+            //{
+            //    HasFocus = false;
+            //    OnLeave(null);
+            //}
         }
 
         #endregion

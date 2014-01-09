@@ -5,7 +5,7 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using XRpgLibrary.TileEngine;
+
 
 namespace XRpgLibrary.SpriteClasses
 {
@@ -96,9 +96,9 @@ namespace XRpgLibrary.SpriteClasses
         public BaseSprite(Texture2D image, Rectangle? sourceRectangle, Point tile) 
             : this(image, sourceRectangle)
         {
-            this.position = new Vector2(
-                tile.X * Engine.TileWidth, 
-                tile.Y * Engine.TileHeight);
+            //this.position = new Vector2(
+            //    tile.X * Engine.TileWidth, 
+            //    tile.Y * Engine.TileHeight);
         }
 
         #endregion

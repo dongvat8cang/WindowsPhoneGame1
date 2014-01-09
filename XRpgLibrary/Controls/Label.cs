@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+
 namespace XRpgLibrary.Controls
 {
     public class Label : Control
@@ -32,6 +33,7 @@ namespace XRpgLibrary.Controls
 
         public override void HandleInput(PlayerIndex playerIndex)
         {
+
         }
 
         #endregion

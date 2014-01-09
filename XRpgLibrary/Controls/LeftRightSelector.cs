@@ -132,25 +132,25 @@ namespace XRpgLibrary.Controls
             if (items.Count == 0)
                 return;
 
-            if (InputHandler.ButtonReleased(Buttons.LeftThumbstickLeft, playerIndex) ||
-                InputHandler.ButtonReleased(Buttons.DPadLeft, playerIndex) ||
-                InputHandler.KeyReleased(Keys.Left))
-            {
-                selectedItem--;
-                if (selectedItem < 0)
-                    selectedItem = 0;
-                OnSelectionChanged();
-            }
+            //if (InputHandler.ButtonReleased(Buttons.LeftThumbstickLeft, playerIndex) ||
+            //    InputHandler.ButtonReleased(Buttons.DPadLeft, playerIndex) ||
+            //    InputHandler.KeyReleased(Keys.Left))
+            //{
+            //    selectedItem--;
+            //    if (selectedItem < 0)
+            //        selectedItem = 0;
+            //    OnSelectionChanged();
+            //}
 
-            if (InputHandler.ButtonReleased(Buttons.LeftThumbstickRight, playerIndex) ||
-                InputHandler.ButtonReleased(Buttons.DPadRight, playerIndex) ||
-                InputHandler.KeyReleased(Keys.Right))
-            {
-                selectedItem++;
-                if (selectedItem >= items.Count)
-                    selectedItem = items.Count - 1;
-                OnSelectionChanged();
-            }
+            //if (InputHandler.ButtonReleased(Buttons.LeftThumbstickRight, playerIndex) ||
+            //    InputHandler.ButtonReleased(Buttons.DPadRight, playerIndex) ||
+            //    InputHandler.KeyReleased(Keys.Right))
+            //{
+            //    selectedItem++;
+            //    if (selectedItem >= items.Count)
+            //        selectedItem = items.Count - 1;
+            //    OnSelectionChanged();
+            //}
         }
 
         #endregion

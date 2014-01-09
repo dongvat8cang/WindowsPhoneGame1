@@ -9,6 +9,8 @@ using XRpgLibrary.Controls;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Input.Touch;
 
 namespace WindowsPhoneGame1.GameScreens
 {
@@ -31,6 +33,11 @@ namespace WindowsPhoneGame1.GameScreens
         protected TimeSpan transitionTimer;
         protected TimeSpan transitionInterval = TimeSpan.FromSeconds(0.5);
 
+        protected Rectangle[] places;
+
+        protected int number = 0;
+
+        protected SoundEffect touch;
         #endregion
 
         #region Properties region
@@ -53,14 +60,16 @@ namespace WindowsPhoneGame1.GameScreens
         public override void Initialize()
         {
             base.Initialize();
+            TouchPanel.EnabledGestures = GestureType.Tap;
         }
 
         protected override void LoadContent()
         {
             ContentManager Content = Game.Content;
 
-            SpriteFont menuFont = Content.Load<SpriteFont>(@"Fonts\ControlFont");
+            SpriteFont menuFont = Content.Load<SpriteFont>(@"Fonts\StartMenuFont");
             ControlManager = new ControlManager(menuFont);
+            touch = Content.Load<SoundEffect>(@"Sounds\TouchSound");
 
             base.LoadContent();
         }

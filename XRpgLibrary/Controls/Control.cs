@@ -25,12 +25,20 @@ namespace XRpgLibrary.Controls
         protected SpriteFont spriteFont;
         protected Color color;
         protected string type;
+        public Rectangle place;
+
+        public Rectangle Place
+        {
+            get { return place; }
+            set { place = value; }
+        }
 
         #endregion
 
         #region Event Region
 
         public event EventHandler Selected;
+
 
         #endregion
 

@@ -68,6 +68,7 @@
     <Compile Include="Components\DataManager.cs" />
     <Compile Include="Components\Player.cs" />
     <Compile Include="GameScreens\BaseGameState.cs" />
+    <Compile Include="GameScreens\OptionScreen.cs" />
     <Compile Include="GameScreens\StartMenuScreen.cs" />
     <Compile Include="GameScreens\TitleScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

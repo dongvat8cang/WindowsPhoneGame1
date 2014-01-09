@@ -153,25 +153,7 @@ namespace XRpgLibrary.Controls
 
         public override void HandleInput(PlayerIndex playerIndex)
         {
-            if (InputHandler.ButtonReleased(Buttons.LeftThumbstickLeft, playerIndex) ||
-                InputHandler.ButtonReleased(Buttons.DPadLeft, playerIndex) ||
-                InputHandler.KeyReleased(Keys.Left))
-            {
-                current -= increment;
-                if (current < minValue)
-                    current = minValue;
-                OnSelectionChanged();
-            }
-
-            if (InputHandler.ButtonReleased(Buttons.LeftThumbstickRight, playerIndex) ||
-                InputHandler.ButtonReleased(Buttons.DPadRight, playerIndex) ||
-                InputHandler.KeyReleased(Keys.Right))
-            {
-                current += increment;
-                if (current > maxValue)
-                    current = maxValue;
-                OnSelectionChanged();
-            }
+           
         }
 
         protected virtual void OnSelectionChanged()

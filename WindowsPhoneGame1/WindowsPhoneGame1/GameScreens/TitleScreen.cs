@@ -9,6 +9,8 @@ using Microsoft.Xna.Framework.Graphics;
 
 using XRpgLibrary;
 using XRpgLibrary.Controls;
+using Microsoft.Xna.Framework.Input.Touch;
+using Microsoft.Xna.Framework.Media;
 
 namespace WindowsPhoneGame1.GameScreens
 {
@@ -17,7 +19,8 @@ namespace WindowsPhoneGame1.GameScreens
         #region Field region
 
         Texture2D backgroundImage;
-        LinkLabel startLabel;
+        Song music;
+        //LinkLabel startLabel;
 
         #endregion
 
@@ -35,27 +38,44 @@ namespace WindowsPhoneGame1.GameScreens
         protected override void LoadContent()
         {
             ContentManager Content = GameRef.Content;
+           
 
             backgroundImage = Content.Load<Texture2D>(@"Backgrounds\titlescreen");
 
             base.LoadContent();
+            music = Content.Load<Song>("preview");
+            MediaPlayer.Play(music);
+            //startLabel = new LinkLabel();
+            //startLabel.Position = new Vector2(35, 600);
+            //startLabel.Text = "Touch to countinue";
+            //startLabel.Color = Color.White;
+            //startLabel.TabStop = true;
+            //startLabel.HasFocus = true;
+            //startLabel.Selected += new EventHandler(startLabel_Selected);
 
-            startLabel = new LinkLabel();
-            startLabel.Position = new Vector2(350, 600);
-            startLabel.Text = "Press ENTER to begin";
-            startLabel.Color = Color.White;
-            startLabel.TabStop = true;
-            startLabel.HasFocus = true;
-            startLabel.Selected += new EventHandler(startLabel_Selected);
-
-            ControlManager.Add(startLabel);
+            //ControlManager.Add(startLabel);
         }
 
         public override void Update(GameTime gameTime)
         {
-            ControlManager.Update(gameTime, PlayerIndex.One);
+            //ControlManager.Update(gameTime, PlayerIndex.One);
 
             base.Update(gameTime);
+             while (TouchPanel.IsGestureAvailable)
+            {
+                GestureSample gesture = TouchPanel.ReadGesture();
+
+                switch (gesture.GestureType)
+                {
+
+                    case GestureType.Tap:
+                        Transition(ChangeType.Push, GameRef.StartMenuScreen); 
+                        
+                    break;
+
+
+                }
+            }
         }
 
         public override void Draw(GameTime gameTime)
@@ -78,10 +98,10 @@ namespace WindowsPhoneGame1.GameScreens
 
         #region Title Screen Methods
 
-        private void startLabel_Selected(object sender, EventArgs e)
-        {
-            Transition(ChangeType.Push, GameRef.StartMenuScreen);
-        }
+        //private void startLabel_Selected(object sender, EventArgs e)
+        //{
+        //    Transition(ChangeType.Push, GameRef.StartMenuScreen);
+        //}
 
         #endregion
     }

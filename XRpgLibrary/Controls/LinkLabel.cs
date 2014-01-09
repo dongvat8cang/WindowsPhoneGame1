@@ -21,10 +21,15 @@ namespace XRpgLibrary.Controls
             set { selectedColor = value; }
         }
 
+       
+
         #endregion
 
         #region Constructor Region
 
+        
+
+   
         public LinkLabel()
         {
             TabStop = true;
@@ -42,20 +47,21 @@ namespace XRpgLibrary.Controls
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (hasFocus)
-                spriteBatch.DrawString(SpriteFont, Text, Position, selectedColor);
-            else
-                spriteBatch.DrawString(SpriteFont, Text, Position, Color);
+            //if (hasFocus)
+            //    spriteBatch.DrawString(spriteFont, Text, Position, selectedColor);
+            //else
+                spriteBatch.DrawString(spriteFont, Text, Position, Color);
         }
 
+        
         public override void HandleInput(PlayerIndex playerIndex)
         {
-            if (!HasFocus)
-                return;
+            //if (!HasFocus)
+            //    return;
 
-            if (InputHandler.KeyReleased(Keys.Enter) ||
-                InputHandler.ButtonReleased(Buttons.A, playerIndex))
-                base.OnSelected(null);
+            //if (InputHandler.KeyReleased(Keys.Enter) ||
+            //    InputHandler.ButtonReleased(Buttons.A, playerIndex))
+            //    base.OnSelected(null);
         }
 
         #endregion

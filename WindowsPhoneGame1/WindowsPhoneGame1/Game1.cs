@@ -29,6 +29,7 @@ namespace WindowsPhoneGame1
 
         public TitleScreen TitleScreen;
         public StartMenuScreen StartMenuScreen;
+        public OptionScreen OptionScreen;
         //public GamePlayScreen GamePlayScreen;
         //public CharacterGeneratorScreen CharacterGeneratorScreen;
         //public LoadGameScreen LoadGameScreen;
@@ -38,8 +39,8 @@ namespace WindowsPhoneGame1
 
         #region Screen Field Region
 
-        const int screenWidth = 1024;
-        const int screenHeight = 768;
+        const int screenWidth = 480;
+        const int screenHeight = 800;
 
         public readonly Rectangle ScreenRectangle;
 
@@ -75,13 +76,13 @@ namespace WindowsPhoneGame1
 
             Content.RootDirectory = "Content";
 
-            Components.Add(new InputHandler(this));
 
             stateManager = new GameStateManager(this);
             Components.Add(stateManager);
 
             TitleScreen = new TitleScreen(this, stateManager);
             StartMenuScreen = new StartMenuScreen(this, stateManager);
+            OptionScreen = new OptionScreen(this, stateManager);
             //GamePlayScreen = new GamePlayScreen(this, stateManager);
             //CharacterGeneratorScreen = new CharacterGeneratorScreen(this, stateManager);
             //LoadGameScreen = new LoadGameScreen(this, stateManager);
