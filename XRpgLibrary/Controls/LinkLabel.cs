@@ -37,6 +37,15 @@ namespace XRpgLibrary.Controls
             Position = Vector2.Zero;
         }
 
+        public LinkLabel(string s, Vector2 pos, Color newcolor)
+        {   TabStop = true;
+        HasFocus = false;
+            text = s;
+            Position = pos;
+            color = newcolor;
+            
+        }
+
         #endregion
 
         #region Abstract Methods

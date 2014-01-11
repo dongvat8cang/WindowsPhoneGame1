@@ -10,7 +10,7 @@ using RpgLibrary.EffectClasses;
 
 namespace RpgLibrary.CharacterClasses
 {
-    public enum EntityGender { Male, Female, Unknown }
+    
     public enum EntityType { Character, NPC, Monster, Creature }
 
     public sealed class Entity
@@ -20,7 +20,7 @@ namespace RpgLibrary.CharacterClasses
         private string entityName;
         private string entityClass;
         private EntityType entityType;
-        private EntityGender gender;
+        
 
         public string EntityName
         {
@@ -40,11 +40,6 @@ namespace RpgLibrary.CharacterClasses
             private set { entityType = value; }
         }
 
-        public EntityGender Gender
-        {
-            get { return gender; }
-            private set { gender = value; }
-        }
 
         #endregion
 
@@ -89,28 +84,22 @@ namespace RpgLibrary.CharacterClasses
 
       
 
-        public List<Modifier> TalentModifiers
-        {
-            get { return talentModifiers; }
-        }
 
         #endregion
 
         #region Basic Attribute and Property Region
 
-        private int strength;
-        private int dexterity;
-        private int cunning;
-        private int willpower;
-        private int magic;
-        private int constitution;
+        public int strength;
+        public int dexterity;
+        public int cunning;
+        public int willpower;
 
-        private int strengthModifier;
-        private int dexterityModifier;
-        private int cunningModifier;
-        private int willpowerModifier;
-        private int magicModifier;
-        private int constitutionModifier;
+
+        public int strengthModifier;
+        public int dexterityModifier;
+        public int cunningModifier;
+        public int willpowerModifier;
+        
 
         public int Strength
         {
@@ -137,17 +126,7 @@ namespace RpgLibrary.CharacterClasses
             private set { willpower = value; }
         }
 
-        public int Magic
-        {
-            get { return magic + magicModifier; }
-            private set { magic = value; }
-        }
-
-        public int Constitution
-        {
-            get { return constitution + constitutionModifier; }
-            private set { constitution = value; }
-        }
+       
 
         #endregion
 
@@ -172,29 +151,29 @@ namespace RpgLibrary.CharacterClasses
             get { return mana; }
         }
 
-        private int attack;
+       
         private int damage;
         private int defense;
 
         #endregion
 
-        #region Resistance and Weakness Field and Property Region
+        //#region Resistance and Weakness Field and Property Region
 
-        private readonly List<Resistance> resistances;
+        //private readonly List<Resistance> resistances;
 
-        public List<Resistance> Resistances
-        {
-            get { return resistances; }
-        }
+        //public List<Resistance> Resistances
+        //{
+        //    get { return resistances; }
+        //}
 
-        private readonly List<Weakness> weaknesses;
+        //private readonly List<Weakness> weaknesses;
 
-        public List<Weakness> Weaknesses
-        {
-            get { return weaknesses; }
-        }
+        //public List<Weakness> Weaknesses
+        //{
+        //    get { return weaknesses; }
+        //}
 
-        #endregion
+        //#endregion
 
         #region Level Field and Property Region
 
@@ -223,11 +202,9 @@ namespace RpgLibrary.CharacterClasses
             Dexterity = 10;
             Cunning = 10;
             Willpower = 10;
-            Magic = 10;
-            Constitution = 10;
-
+    
             health = new AttributePair(0);
-            stamina = new AttributePair(0);
+           
             mana = new AttributePair(0);
 
             skills = new Dictionary<string, Skill>();
@@ -235,30 +212,27 @@ namespace RpgLibrary.CharacterClasses
         
             skillModifiers = new List<Modifier>();
             spellModifiers = new List<Modifier>();
-            talentModifiers = new List<Modifier>();
+           
 
-            resistances = new List<Resistance>();
-            weaknesses = new List<Weakness>();
+           
         }
 
         public Entity(
             string name, 
             EntityData entityData, 
-            EntityGender gender, 
+             
             EntityType entityType) : this()
         {
             EntityName = name;
             EntityClass = entityData.EntityName;
-            Gender = gender;
+           
             EntityType = entityType;
 
             Strength = entityData.Strength;
             Dexterity = entityData.Dexterity;
             Cunning = entityData.Cunning;
             Willpower = entityData.Willpower;
-            Magic = entityData.Magic;
-            Constitution = entityData.Constitution;
-
+           
             health = new AttributePair(0);
             stamina = new AttributePair(0);
             mana = new AttributePair(0);

@@ -16,6 +16,13 @@ namespace XRpgLibrary.Controls
         Texture2D image;
         Rectangle sourceRect;
         Rectangle destRect;
+        float scale = 1f;
+
+        public float Scale
+        {
+            get { return scale; }
+            set { scale = value; }
+        }
 
         #endregion
 
@@ -69,7 +76,10 @@ namespace XRpgLibrary.Controls
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(image, destRect, sourceRect, color);
+            //SpriteBatch.Draw(image, destRect, sourceRect, Color.White, null, scale, SpriteEffects.None, 0f);
+            if (scale == 1f)
+            { spriteBatch.Draw(image, destRect, sourceRect, color); }
+            else spriteBatch.Draw(image, position, sourceRect, Color.White, 0f, new Vector2(0, 0), scale, SpriteEffects.None, 0f);
         }
 
         public override void HandleInput(PlayerIndex playerIndex)
@@ -87,6 +97,8 @@ namespace XRpgLibrary.Controls
                 (int)newPosition.Y,
                 sourceRect.Width,
                 sourceRect.Height);
+
+            position = newPosition;
         }
 
         #endregion

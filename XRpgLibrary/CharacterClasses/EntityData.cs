@@ -15,9 +15,7 @@ namespace RpgLibrary.CharacterClasses
         public int Dexterity;
         public int Cunning;
         public int Willpower;
-        public int Magic;
-        public int Constitution;
-
+       
         public string HealthFormula;
         public string StaminaFormula;
         public string MagicFormula;
@@ -49,8 +47,7 @@ namespace RpgLibrary.CharacterClasses
             Willpower = willpower;
             Cunning = cunning;
             Willpower = willpower;
-            Magic = magic;
-            Constitution = constitution;
+           
             HealthFormula = health;
             StaminaFormula = stamina;
             MagicFormula = mana;
@@ -67,8 +64,7 @@ namespace RpgLibrary.CharacterClasses
             toString += Dexterity.ToString() + ", ";
             toString += Cunning.ToString() + ", ";
             toString += Willpower.ToString() + ", ";
-            toString += Magic.ToString() + ", ";
-            toString += Constitution.ToString() + ", ";
+          
             toString += HealthFormula + ", ";
             toString += StaminaFormula + ", ";
             toString += MagicFormula;
@@ -85,8 +81,7 @@ namespace RpgLibrary.CharacterClasses
             data.Dexterity = this.Dexterity;
             data.Cunning = this.Cunning;
             data.Willpower = this.Willpower;
-            data.Magic = this.Magic;
-            data.Constitution = this.Constitution;
+          
             data.HealthFormula = this.HealthFormula;
             data.StaminaFormula = this.StaminaFormula;
             data.MagicFormula = this.MagicFormula;

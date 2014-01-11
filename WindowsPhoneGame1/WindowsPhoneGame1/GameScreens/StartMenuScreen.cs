@@ -15,7 +15,7 @@ using Microsoft.Xna.Framework.Audio;
 
 namespace WindowsPhoneGame1.GameScreens
 {
-    public class StartMenuScreen : BaseGameState
+    public class StartMenuScreen: BaseGameState
     {
         #region Field region
 
@@ -64,6 +64,7 @@ namespace WindowsPhoneGame1.GameScreens
                 Content.Load<Texture2D>(@"Backgrounds\startmenu"), 
                 GameRef.ScreenRectangle);
             ControlManager.Add(backgroundImage);
+
 
             //Texture2D arrowTexture = Content.Load<Texture2D>(@"GUI\leftarrowUp");
             
@@ -130,7 +131,7 @@ namespace WindowsPhoneGame1.GameScreens
                 }
             }
             //set up rectangle for input touch
-            
+            startGame.place = new Rectangle((int)startGame.Position.X, (int)startGame.Position.Y, (int)startGame.Size.X, (int)startGame.Size.Y);
             options.place = new Rectangle((int)options.Position.X, (int)options.Position.Y, (int)options.Size.X, (int)options.Size.Y);
 
             //ControlManager_FocusChanged(startGame, null);
@@ -169,6 +170,11 @@ namespace WindowsPhoneGame1.GameScreens
                         if (options.place.Contains((int)gesture.Position.X, (int)gesture.Position.Y))
                         {
                             Transition(ChangeType.Push, GameRef.OptionScreen);
+                            touch.Play();
+                        }
+                        else if (startGame.place.Contains((int)gesture.Position.X, (int)gesture.Position.Y))
+                        {
+                            Transition(ChangeType.Push, GameRef.WorldMapScreen);
                             touch.Play();
                         }
                         break;

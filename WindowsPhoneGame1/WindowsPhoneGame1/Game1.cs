@@ -30,6 +30,8 @@ namespace WindowsPhoneGame1
         public TitleScreen TitleScreen;
         public StartMenuScreen StartMenuScreen;
         public OptionScreen OptionScreen;
+        public WorldMapScreen WorldMapScreen;
+        public BattleScreen BattleScreen;
         //public GamePlayScreen GamePlayScreen;
         //public CharacterGeneratorScreen CharacterGeneratorScreen;
         //public LoadGameScreen LoadGameScreen;
@@ -83,6 +85,9 @@ namespace WindowsPhoneGame1
             TitleScreen = new TitleScreen(this, stateManager);
             StartMenuScreen = new StartMenuScreen(this, stateManager);
             OptionScreen = new OptionScreen(this, stateManager);
+            WorldMapScreen = new WorldMapScreen(this, stateManager);
+            BattleScreen = new BattleScreen(this, stateManager);
+
             //GamePlayScreen = new GamePlayScreen(this, stateManager);
             //CharacterGeneratorScreen = new CharacterGeneratorScreen(this, stateManager);
             //LoadGameScreen = new LoadGameScreen(this, stateManager);

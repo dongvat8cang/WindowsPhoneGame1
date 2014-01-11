@@ -65,12 +65,7 @@ namespace RpgLibrary
                 case "willpower":
                     target += Skill.AttributeModifier(entity.Willpower);
                     break;
-                case "magic":
-                    target += Skill.AttributeModifier(entity.Magic);
-                    break;
-                case "constitution":
-                    target += Skill.AttributeModifier(entity.Constitution);
-                    break;
+               
             }
 
             if (Mechanics.RollDie(DieType.D100) <= target)
@@ -97,12 +92,7 @@ namespace RpgLibrary
                 case "willpower":
                     value = entity.Willpower;
                     break;
-                case "magic":
-                    value = entity.Magic;
-                    break;
-                case "constitution":
-                    value = entity.Constitution;
-                    break;
+              
             }
 
             return value;
